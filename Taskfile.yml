@@ -2,3 +2,128 @@ version: '3'
 
 includes:
   utils: vendor/yootheme/starter-utils
+
+vars:
+  NAME: 'example'
+  VERSION: '1.0.0'
+  DESCRIPTION: 'Example App Description'
+  DATE: '{{ now | date "2006-01-02" }}'
+  COPYRIGHT: 'Copyright (C)'
+  LICENSE: 'GNU General Public License'
+  AUTHOR: 'YOOtheme'
+  AUTHOREMAIL: 'info@yootheme.com'
+  AUTHORURL: 'https://yootheme.com'
+
+tasks:
+  copy-joomla:
+    internal: true
+    cmds:
+      - task: utils:copy
+        vars:
+          cwd: build/joomla
+          src: '**'
+          dest: dist/joomla
+
+      - task: utils:placeholder
+        vars:
+          src: 'dist/joomla/**/*.xml'
+          replace:
+            ref: >
+              dict
+              "AUTHOR" "{{ .AUTHOR }}"
+              "AUTHOREMAIL" "{{ .AUTHOREMAIL }}"
+              "AUTHORURL" "{{ .AUTHORURL }}"
+              "COPYRIGHT" "{{ .COPYRIGHT }}"
+              "DATE" "{{ .DATE }}"
+              "DESCRIPTION" "{{ .DESCRIPTION }}"
+              "LICENSE" "{{ .LICENSE }}"
+              "NAME" "{{ .NAME }}"
+              "VERSION" "{{ .VERSION }}"
+
+  copy-wordpress:
+    internal: true
+    cmds:
+      - task: utils:copy
+        vars:
+          cwd: build/wordpress
+          src: '*.php'
+          dest: dist/wordpress
+
+      - task: utils:placeholder
+        vars:
+          src: dist/wordpress/{{ .NAME }}.php
+          replace:
+            ref: >
+              dict
+              "AUTHOR" "{{ .AUTHOR }}"
+              "AUTHOREMAIL" "{{ .AUTHOREMAIL }}"
+              "AUTHORURL" "{{ .AUTHORURL }}"
+              "COPYRIGHT" "{{ .COPYRIGHT }}"
+              "DATE" "{{ .DATE }}"
+              "DESCRIPTION" "{{ .DESCRIPTION }}"
+              "LICENSE" "{{ .LICENSE }}"
+              "NAME" "{{ .NAME }}"
+              "VERSION" "{{ .VERSION }}"
+
+  remove-dist-joomla:
+    internal: true
+    cmds:
+      - task: utils:remove
+        vars:
+          src: dist/joomla
+
+  remove-dist-wordpress:
+    internal: true
+    cmds:
+      - task: utils:remove
+        vars:
+          src: dist/wordpress
+
+  build-joomla:
+    deps:
+      - copy-joomla
+    cmds:
+      - task: utils:zip
+        vars:
+          cwd: dist/joomla
+          src: '**'
+          dest: dist/{{ .NAME }}-{{ .VERSION }}.zip
+      - defer:
+          task: remove-dist-joomla
+
+  build-wordpress:
+    deps:
+      - copy-wordpress
+    cmds:
+      - task: utils:zip
+        vars:
+          cwd: dist/wordpress
+          src: '**'
+          dest: dist/wp-{{ .NAME }}-{{ .VERSION }}.zip
+      - defer:
+          task: remove-dist-wordpress
+
+  build:
+    deps:
+      - build-joomla
+      - build-wordpress
+
+  setup-joomla:
+    deps:
+      - copy-dist-joomla
+    cmds:
+      - task: utils:copy
+        vars:
+          cwd: dist/joomla
+          src: '**'
+          dest: ../joomla/plugins
+
+  setup-wordpress:
+    deps:
+      - copy-dist-wordpress
+    cmds:
+      - task: utils:copy
+        vars:
+          cwd: dist/wordpress
+          src: '**'
+          dest: ../wordpress/wp-content/plugins
