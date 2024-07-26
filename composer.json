@@ -21,6 +21,7 @@
         }
     ],
     "scripts": {
+        "run:task": "YOOtheme\\Starter\\TaskHelper::run",
         "create:element": "YOOtheme\\Starter\\CreateElementCommand"
     }
 }
