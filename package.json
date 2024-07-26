@@ -1,0 +1,21 @@
+{
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "prepare": "husky install",
+        "prettier:check": "prettier . --check",
+        "prettier:write": "prettier . --write"
+    },
+    "lint-staged": {
+        "*.{md,js,json,css,php}": "prettier --write"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "@prettier/plugin-php": "^0.22.2",
+        "@prettier/plugin-xml": "^3.4.1",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.7",
+        "prettier": "^3.3.3"
+    }
+}

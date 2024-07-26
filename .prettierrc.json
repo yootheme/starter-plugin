@@ -1,0 +1,15 @@
+{
+    "plugins": ["@prettier/plugin-php", "@prettier/plugin-xml"],
+    "tabWidth": 4,
+    "printWidth": 100,
+    "singleQuote": true,
+    "phpVersion": "8.0",
+    "overrides": [
+        {
+            "files": ["**/*.md", "**/*.yml"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

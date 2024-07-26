@@ -1,0 +1,9 @@
+.env
+.idea
+.vscode
+.history
+.DS_Store
+.php_cs.cache
+
+vendor/
+node_modules/
