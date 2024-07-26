@@ -1,0 +1,26 @@
+{
+    "name": "yootheme/starter-plugin",
+    "description": "YOOtheme Pro - Starter Plugin",
+    "license": "MIT",
+    "type": "project",
+    "keywords": [
+        "joomla",
+        "wordpress",
+        "yootheme"
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "yootheme/starter-utils": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../starter-utils"
+        }
+    ],
+    "scripts": {
+        "create:element": "YOOtheme\\Starter\\CreateElementCommand"
+    }
+}
