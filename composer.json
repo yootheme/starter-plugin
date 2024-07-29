@@ -22,6 +22,8 @@
     ],
     "scripts": {
         "run:task": "YOOtheme\\Starter\\TaskHelper::run",
-        "create:element": "YOOtheme\\Starter\\CreateElementCommand"
+        "create:plugin": "YOOtheme\\Starter\\CreatePluginCommand",
+        "create:element": "YOOtheme\\Starter\\CreateElementCommand",
+        "post-create-project-cmd": "YOOtheme\\Starter\\CreatePluginCommand"
     }
 }
