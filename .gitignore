@@ -5,5 +5,8 @@
 .DS_Store
 .php_cs.cache
 
+build/
+dist/
+elements/
 vendor/
 node_modules/
