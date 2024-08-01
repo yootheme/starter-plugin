@@ -24,6 +24,7 @@
         "run:task": "YOOtheme\\Starter\\TaskHelper::run",
         "create:plugin": "YOOtheme\\Starter\\CreatePluginCommand",
         "create:element": "YOOtheme\\Starter\\CreateElementCommand",
+        "create:module": "YOOtheme\\Starter\\CreateModuleCommand",
         "post-create-project-cmd": "YOOtheme\\Starter\\CreatePluginCommand"
     }
 }
