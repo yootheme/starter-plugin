@@ -6,7 +6,7 @@ This is a [YOOtheme Pro](https://yootheme.com) plugin for Joomla/WordPress. It i
 
 The following software needs to be installed and running on your system.
 
-|          |                                                                            |
+| Name     | Description                                                                |
 |----------|----------------------------------------------------------------------------|
 | Composer | PHP Dependency Manager [https://getcomposer.org/](https://getcomposer.org/) |
 | NodeJS   | JavaScript Runtime [https://nodejs.org/](https://nodejs.org/) |
@@ -21,16 +21,18 @@ It's recommended to create the plugin folder inside the CMS plugin folder (Jooml
 composer create-project yootheme/starter-plugin my-plugin
 ```
 
-You will be asked for additional plugin information
+You will be asked for additional plugin information, this will be used when building the plugin.
 
-`Enter plugin title:` - The Plugin title
-`Enter plugin description:` - Description
-`Enter author name:` - Author Name
-`Enter author email:` - Author Email
-`Enter author url:` - Author URL
+- `Enter plugin title:` The Plugin title
+- `Enter plugin description:` Description
+- `Enter author name:` Author Name
+- `Enter author email:` Author Email
+- `Enter author url:` Author URL
 
 
-Once the plugin has been created you will find a new folder `build` in the plugin directory. In here you find a `joomla` and `wordpress` folder containing the plugin blueprint files.
+Once the plugin has been created you will find a new folder `build` in the plugin directory.
+In here you find a `joomla` and `wordpress` folder containing the plugin blueprint files.
+
 These files contain placeholders for the information provided earlier. The placeholder are replaced by the `build` and `setup` tasks when the plugin is built.
 
 | System    | files                            |
@@ -46,15 +48,15 @@ Create a new module run the command:
 
 ### Arguments
 
-|      |                 |
+| arg  | Description     |
 |------|-----------------|
 | name | The module name |
 
 ### Questions
 
-`Enter module namespace:` - Enter optional PHP namespace
-`Add module assets example? [Y/n]` - Include an example how to load custom assets in the module? (default Yes)
-`Add settings example? [Y/n]` - Include an example how create settings for the module? (default Yes)
+- `Enter module namespace:` Enter optional PHP namespace
+- `Add module assets example? [Y/n]` Include an example how to load custom assets in the module? (default Yes)
+- `Add settings example? [Y/n]` Include an example how create settings for the module? (default Yes)
 
 ## Create Element
 
@@ -64,15 +66,15 @@ Create new elements with the command:
 
 ### Arguments
 
-|        |                 |
+| arg    | Description     |
 |--------|-----------------|
 | name   | The element name |
 | module | The module name to which this element will be added. If you have multiple modules and do not provide the module, a list of your modules will be suggested. <br>  The command errors if no module have been created before. |
 
 ### Questions
 
-`Create multiple items element? [y/N]` - Create an element that contains multiple items (like a Grid element) (default No)
-`Enter element title:` - The element title
+- `Create multiple items element? [y/N]` Create an element that contains multiple items (like a Grid element) (default No)
+- `Enter element title:` The element title
 
 
 ## Tasks
