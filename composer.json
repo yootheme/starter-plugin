@@ -19,7 +19,7 @@
         "create:plugin": "YOOtheme\\Starter\\CreatePluginCommand",
         "create:element": "YOOtheme\\Starter\\CreateElementCommand",
         "create:module": "YOOtheme\\Starter\\CreateModuleCommand",
-        "post-create-project-cmd": "YOOtheme\\Starter\\CreatePluginCommand"
+        "post-create-project-cmd": "@composer create:plugin"
     },
     "archive": {
         "exclude": [
