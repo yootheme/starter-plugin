@@ -20,5 +20,11 @@
         "create:element": "YOOtheme\\Starter\\CreateElementCommand",
         "create:module": "YOOtheme\\Starter\\CreateModuleCommand",
         "post-create-project-cmd": "YOOtheme\\Starter\\CreatePluginCommand"
+    },
+    "archive": {
+        "exclude": [
+            ".husky",
+            "package*.json"
+        ]
     }
 }
