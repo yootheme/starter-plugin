@@ -30,15 +30,22 @@ You will be asked for additional plugin information, this will be used in the pl
 - `Enter author url:` Author URL
 
 
-Once the plugin has been created you will find a new folder `build` in the plugin directory.
-In here you find a `joomla` and `wordpress` folder containing the plugin blueprint files.
+### Folder Structure
 
-These files contain placeholders for the information provided earlier. The placeholder are replaced by the `build` and `setup` tasks when the plugin is built.
+Once the plugin has been created you will find the following folder structure in the plugin.
 
-| System    | files                            |
-|-----------|----------------------------------|
-| Joomla    | my-plugin.php <br> my-plugin.xml |
-| WordPress | my-plugin.php |
+```
+.
+├── build                   # Plugin blueprint files
+│   ├── joomla
+│       ├── my-plugin.php   # Joomla plugin
+|       ├── my-plugin.xml   # Joomla plguin metadata
+│   ├── wordpress
+│       ├── my-plugin.php   # WordPress plugin
+├── vendor                  # development dependencies
+├── LICENSE.md
+└── README.md
+```
 
 ## Create Module
 
@@ -58,6 +65,24 @@ Create a new module run the command:
 - `Add module assets example? [Y/n]` Include an example how to load custom assets in the module? (default Yes)
 - `Add settings example? [Y/n]` Include an example how create settings for the module? (default Yes)
 
+### Folder Structure
+
+Please check the [Developer Documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) for a detailed explanation of a modules functionality.
+
+```
+modules                              # Modules are added to this folder
+├── my-module
+|   ├── assets                        # Asset examples (Depends on choice in create command)
+|      ├── js
+|      ├── css
+|   ├── config                        # Config examples (Depends on choice in create command)
+|      ├── customizer.json
+|   ├── src                           # Depending on the choices in the create command
+|      ├── AssetsListener.php
+|      ├── SettingssListener.php
+|   ├── bootstrap.php                 # Module definition
+```
+
 ## Create Element
 
 Create new elements with the command:
@@ -75,6 +100,22 @@ Create new elements with the command:
 
 - `Create multiple items element? [y/N]` Create an element that contains multiple items (like a Grid element) (default No)
 - `Enter element title:` The element title
+
+### Folder Structure
+
+Please check the [Developer Documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-elements) for detailed explanation of Builder Elements.
+
+```
+my-module                       # Elements are added to the specified module
+├── elements
+    ├── my-element              # Element definition and templates
+        ├── templates
+        ├── element.json
+    ├── my-element_item         # Multiple items element definition and templates
+        ├── templates
+        ├── element.json
+        ├── element.php
+```
 
 
 ## Tasks
