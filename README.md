@@ -9,19 +9,19 @@ The following software needs to be installed and running on your system.
 | Name     | Description                                                                |
 |----------|----------------------------------------------------------------------------|
 | Composer | PHP Dependency Manager [https://getcomposer.org/](https://getcomposer.org/) |
-| NodeJS   | JavaScript Runtime [https://nodejs.org/](https://nodejs.org/) |
 | Task     | To run build tasks you need to install [Task](https://taskfile.dev) via Node and npm or use another [installation method](https://taskfile.dev/installation/) of your choice.|
 
 ## Getting Started
 
 After you have installed PHP and Composer, you create a new plugin project via Composer's create-project command. This will create a new `my-plugin` directory with the plugin files.
-It's recommended to create the plugin folder inside the CMS plugin folder (Joomla `plugins/system` / WordPress `wp-content/plugins`)
+
+It's recommended to create the plugin folder inside the CMS plugin folder (Joomla `plugins/system` | WordPress `wp-content/plugins`)
 
 ```bash
 composer create-project yootheme/starter-plugin my-plugin
 ```
 
-You will be asked for additional plugin information, this will be used when building the plugin.
+You will be asked for additional plugin information, this will be used in the plugin metadata.
 
 - `Enter plugin title:` The Plugin title
 - `Enter plugin description:` Description
