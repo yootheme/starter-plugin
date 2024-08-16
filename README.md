@@ -6,6 +6,7 @@ This is a [YOOtheme Pro](https://yootheme.com) plugin for Joomla/WordPress. It i
 
 The following software needs to be installed and running on your system.
 
+|          |                                                                            |
 |----------|----------------------------------------------------------------------------|
 | Composer | PHP Dependency Manager [https://getcomposer.org/](https://getcomposer.org/) |
 | NodeJS   | JavaScript Runtime [https://nodejs.org/](https://nodejs.org/) |
@@ -32,9 +33,10 @@ You will be asked for additional plugin information
 Once the plugin has been created you will find a new folder `build` in the plugin directory. In here you find a `joomla` and `wordpress` folder containing the plugin blueprint files.
 These files contain placeholders for the information provided earlier. The placeholder are replaced by the `build` and `setup` tasks when the plugin is built.
 
+| System    | files                            |
 |-----------|----------------------------------|
-| joomla    | my-plugin.php <br> my-plugin.xml |
-| wordpress | my-plugin.php |
+| Joomla    | my-plugin.php <br> my-plugin.xml |
+| WordPress | my-plugin.php |
 
 ## Create Module
 
@@ -44,6 +46,7 @@ Create a new module run the command:
 
 ### Arguments
 
+|      |                 |
 |------|-----------------|
 | name | The module name |
 
@@ -61,6 +64,7 @@ Create new elements with the command:
 
 ### Arguments
 
+|        |                 |
 |--------|-----------------|
 | name   | The element name |
 | module | The module name to which this element will be added. If you have multiple modules and do not provide the module, a list of your modules will be suggested. <br>  The command errors if no module have been created before. |
