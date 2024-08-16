@@ -14,12 +14,6 @@
     "require-dev": {
         "yootheme/starter-utils": "@dev"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../starter-utils"
-        }
-    ],
     "scripts": {
         "run:task": "YOOtheme\\Starter\\TaskHelper::run",
         "create:plugin": "YOOtheme\\Starter\\CreatePluginCommand",
