@@ -1,136 +1,122 @@
 # Starter Plugin
 
-This is a [YOOtheme Pro](https://yootheme.com) plugin for Joomla/WordPress. It is a minimal example plugin that can be used as a starting point for your own plugin development.
+The YOOtheme starter kit provides a minimal and simple starting point for building your next [YOOtheme Pro](https://yootheme.com) extension. Easily create a module for YOOtheme Pro to extend its functionalities. For example, add setting panels to the customizer, elements to the page builder or load needed asset files into the site. Once the module is customized based on your application's needs, automatically build a Joomla plugin and WordPress plugin to distribute it to your customer project.
 
-## Requirements
+## Technical Requirements
 
-The following software needs to be installed and running on your system.
+Install [Composer](https://getcomposer.org/download/), which is used to install PHP packages.
 
-| Name     | Description                                                                |
-|----------|----------------------------------------------------------------------------|
-| Composer | PHP Dependency Manager [https://getcomposer.org/](https://getcomposer.org/) |
-| Task     | To run build tasks you need to install [Task](https://taskfile.dev) via Node and npm or use another [installation method](https://taskfile.dev/installation/) of your choice.|
-
-## Getting Started
-
-After you have installed PHP and Composer, you create a new plugin project via Composer's create-project command. This will create a new `my-plugin` directory with the plugin files.
-
-It's recommended to create the plugin folder inside the CMS plugin folder (Joomla `plugins/system` | WordPress `wp-content/plugins`)
+Also, use Node and npm to install [Task](https://taskfile.dev/), which is needed to run build tasks.
 
 ```bash
-composer create-project yootheme/starter-plugin my-plugin
+npm install -g @go-task/cli
 ```
 
-You will be asked for additional plugin information, this will be used in the plugin metadata.
+## Create a new plugin
 
-- `Enter plugin title:` The Plugin title
-- `Enter plugin description:` Description
-- `Enter author name:` Author Name
-- `Enter author email:` Author Email
-- `Enter author url:` Author URL
+To create a new plugin run the following command in the plugins folder of WordPress `wp-content/plugins` or Joomla `plugins/system` depending on your preferred development environment. Replace `PLUGIN_NAME` with the name of your plugin, for example `my-plugin`.
 
+```bash
+composer create-project yootheme/starter-plugin PLUGIN_NAME
+```
 
-### Folder Structure
+You will be asked for additional plugin information which will be used in the plugin metadata.
 
-Once the plugin has been created you will find the following folder structure in the plugin.
+- `Enter plugin title:` The plugin title, for example `My Plugin`
+- `Enter plugin description:` The plugin description
+- `Enter author name:` The author Name
+- `Enter author email:` The author email
+- `Enter author url:` The author URL
+
+This will create a new `my-plugin` directory with required plugin files.
 
 ```
 .
 ├── build                   # Plugin blueprint files
 │   ├── joomla
 │       ├── my-plugin.php   # Joomla plugin
-|       ├── my-plugin.xml   # Joomla plguin metadata
+|       ├── my-plugin.xml   # Joomla plugin metadata
 │   ├── wordpress
 │       ├── my-plugin.php   # WordPress plugin
-├── vendor                  # development dependencies
+├── vendor                  # Development dependencies
 ├── LICENSE.md
 └── README.md
 ```
 
-## Create Module
+## Set up the plugin
 
-Create a new module run the command:
+Open your new plugin folder in the terminal and use one of the following task to copy the necessary plugin files from the `build` folder to the plugin root folder.
 
-`composer create:module <name>`
-
-### Arguments
-
-| arg  | Description     |
-|------|-----------------|
-| name | The module name |
-
-### Questions
-
-- `Enter module namespace:` Enter optional PHP namespace
-- `Add module assets example? [Y/n]` Include an example how to load custom assets in the module? (default Yes)
-- `Add settings example? [Y/n]` Include an example how create settings for the module? (default Yes)
-
-### Folder Structure
-
-Please check the [Developer Documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) for a detailed explanation of a modules functionality.
-
-```
-modules                              # Modules are added to this folder
-├── my-module
-|   ├── assets                        # Asset examples (Depends on choice in create command)
-|      ├── js
-|      ├── css
-|   ├── config                        # Config examples (Depends on choice in create command)
-|      ├── customizer.json
-|   ├── src                           # Depending on the choices in the create command
-|      ├── AssetsListener.php
-|      ├── SettingssListener.php
-|   ├── bootstrap.php                 # Module definition
+```bash
+task setup-wordpress
+task setup-joomla
 ```
 
-## Create Element
+Now the plugin can be discoverd and installed in WordPress or Joomla.
 
-Create new elements with the command:
+## Create a new module
 
-`composer create:element <name> (<module>)`
+To create a new module run the following command and replace `MODULE_NAME` with the name of your module, for example `my-module`.
 
-### Arguments
-
-| arg    | Description     |
-|--------|-----------------|
-| name   | The element name |
-| module | The module name to which this element will be added. If you have multiple modules and do not provide the module, a list of your modules will be suggested. <br>  The command errors if no module have been created before. |
-
-### Questions
-
-- `Create multiple items element? [y/N]` Create an element that contains multiple items (like a Grid element) (default No)
-- `Enter element title:` The element title
-
-### Folder Structure
-
-Please check the [Developer Documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-elements) for detailed explanation of Builder Elements.
-
-```
-my-module                       # Elements are added to the specified module
-├── elements
-    ├── my-element              # Element definition and templates
-        ├── templates
-        ├── element.json
-    ├── my-element_item         # Multiple items element definition and templates
-        ├── templates
-        ├── element.json
-        ├── element.php
+```bash
+composer create:module MODULE_NAME
 ```
 
+You will be asked further questions to configure the module.
 
-## Tasks
+- `Enter module namespace:` Enter a PHP namespace, for example `MyPlugin/MyModule`
+- `Add asset files example? [y/N]` Enter defaults to *No*.
+- `Add settings example? [y/N]` Enter defaults to *No*.
 
-### Setup
+Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
-The setup tasks copy the plugin files from the `build` folder to the root and replaces the placeholders so it can be discoverd and installed in Joomal/WordPress.
+## Create a new element
 
-If you are developing the plugin in Joomla use `task setup-joomla` or `task setup-wordpress` when you develop in a WordPress environment.
+To create a new element run the following command and replace `ELEMENT_NAME` with the name of your element, for example `my-element`. If there are multiple modules, choose a module of the provided list.
 
-### Build
+```bash
+`composer create:element ELEMENT_NAME`
+```
 
-Creates an installable zip archive of the plugin.
+Optionally define the module where the element should be created.
 
-Run the task `task build` to create a zip archive for Joomla and WordPress. Or you can create the archives individually by running `task build-joomla` or `task build-wordpress`
+```bash
+`composer create:element ELEMENT_NAME MODULE_NAME`
+```
+
+You will be asked further questions to configure the element.
+
+- `Enter element title:` The element title, for example `My Element`
+- `Create multiple items element? [y/N]` Enter defaults to *No*.
+
+Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
+
+## Build distribution files
+
+To create an installable zip archive of the plugin for WordPress and Joomla, run the following task. The created zip files are located in the `dist` folder.
+
+```bash
+task build
+```
+
+Alternatively, create the archives individually.
+
+```bash
+task build-wordpress
+task build-joomla
+```
+
+## Publishing and versioning 
+
+To raise the version number of your plugin or change metadata like the plugin title or description, open the `Taskfile.yml` and edit the options under `vars:`.
+
+After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
+
+In order keep the starter kit files as minimal as possible all utilities are separated in their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update to the latest version from time to time, run `composer install`.
+
+## Github
+
+To make your plugin a Git repository use `git init -b main` and follow the steps under [Adding a local repository to GitHub using Git](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git).
 
 ## License
 
