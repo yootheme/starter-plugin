@@ -22,11 +22,11 @@ composer create-project yootheme/starter-plugin PLUGIN_NAME
 
 You will be asked for additional plugin information which will be used in the plugin metadata.
 
-- `Enter plugin title:` The plugin title, for example `My Plugin`
-- `Enter plugin description:` The plugin description
-- `Enter author name:` The author Name
-- `Enter author email:` The author email
-- `Enter author url:` The author URL
+- **Enter plugin title:** The plugin title, for example `My Plugin`
+- **Enter plugin description:** The plugin description
+- **Enter author name:** The author Name
+- **Enter author email:** The author email
+- **Enter author url:** The author URL
 
 This will create a new `my-plugin` directory with required plugin files.
 
@@ -64,9 +64,9 @@ composer create:module MODULE_NAME
 
 You will be asked further questions to configure the module.
 
-- `Enter module namespace:` Enter a PHP namespace, for example `MyPlugin/MyModule`
-- `Add asset files example? [y/N]` Enter defaults to *No*.
-- `Add settings example? [y/N]` Enter defaults to *No*.
+- **Enter module namespace:** Enter a PHP namespace, for example `MyPlugin/MyModule`
+- **Add asset files example? [y/N]** Enter defaults to *No*.
+- **Add settings example? [y/N]** Enter defaults to *No*.
 
 Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
@@ -86,8 +86,8 @@ Optionally define the module where the element should be created.
 
 You will be asked further questions to configure the element.
 
-- `Enter element title:` The element title, for example `My Element`
-- `Create multiple items element? [y/N]` Enter defaults to *No*.
+- **Enter element title:** The element title, for example `My Element`
+- **Create multiple items element? [y/N]** Enter defaults to *No*.
 
 Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
@@ -112,7 +112,7 @@ To raise the version number of your plugin or change metadata like the plugin ti
 
 After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
 
-In order keep the starter kit files as minimal as possible all utilities are separated in their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update to the latest version from time to time, run `composer install`.
+In order keep the starter kit files as minimal as possible all utilities are separated in their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update to the latest version from time to time, run `composer update`.
 
 ## Github
 
