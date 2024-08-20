@@ -75,13 +75,13 @@ Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/jooml
 To create a new element run the following command and replace `ELEMENT_NAME` with the name of your element, for example `my-element`. If there are multiple modules, choose a module of the provided list.
 
 ```bash
-`composer create:element ELEMENT_NAME`
+composer create:element ELEMENT_NAME
 ```
 
 Optionally define the module where the element should be created.
 
 ```bash
-`composer create:element ELEMENT_NAME MODULE_NAME`
+composer create:element ELEMENT_NAME MODULE_NAME
 ```
 
 You will be asked further questions to configure the element.
