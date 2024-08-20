@@ -2,9 +2,9 @@
 
 The YOOtheme starter kit provides a minimal and simple starting point for building your next [YOOtheme Pro](https://yootheme.com) extension. Easily create a module for YOOtheme Pro to extend its functionalities. For example, add setting panels to the customizer, elements to the page builder or load needed asset files into the site. Once the module is customized based on your application's needs, automatically build a Joomla plugin and WordPress plugin to distribute it to your customer project.
 
-## Technical Requirements
+## Requirements
 
-Install [Composer](https://getcomposer.org/download/), which is used to install PHP packages.
+Install [Composer v2.5+](https://getcomposer.org/download/), which is used to install PHP packages.
 
 Also, use Node and npm to install [Task](https://taskfile.dev/), which is needed to run build tasks.
 
