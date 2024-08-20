@@ -14,7 +14,7 @@ npm install -g @go-task/cli
 
 ## Create a new plugin
 
-To create a new plugin run the following command in the plugins folder of WordPress `wp-content/plugins` or Joomla `plugins/system` depending on your preferred development environment. Replace `PLUGIN_NAME` with the name of your plugin, for example `my-plugin`.
+To create a new plugin run the following command in the plugins folder of WordPress `wp-content/plugins` or Joomla `plugins/system` depending on your preferred development environment. Replace `PLUGIN_NAME` with the name of your plugin, for example `myplugin`.
 
 ```bash
 composer create-project yootheme/starter-plugin PLUGIN_NAME
@@ -28,19 +28,20 @@ You will be asked for additional plugin information which will be used in the pl
 - **Enter author email:** The author email
 - **Enter author url:** The author URL
 
-This will create a new `my-plugin` directory with required plugin files.
+This will create a new `myplugin` directory with required plugin files.
 
 ```
 .
 ├── build                   # Plugin blueprint files
 │   ├── joomla
-│       ├── my-plugin.php   # Joomla plugin
-|       ├── my-plugin.xml   # Joomla plugin metadata
+│       ├── myplugin.php   # Joomla plugin
+|       ├── myplugin.xml   # Joomla plugin metadata
 │   ├── wordpress
-│       ├── my-plugin.php   # WordPress plugin
-├── vendor                  # Development dependencies
+│       ├── myplugin.php   # WordPress plugin
+├── vendor                 # Development dependencies
 ├── LICENSE.md
-└── README.md
+├── README.md
+└── Taskfile.yml           # Metadata and tasks
 ```
 
 ## Set up the plugin
@@ -112,9 +113,25 @@ task build-joomla
 
 To raise the version number of your plugin or change metadata like the plugin title or description, open the `Taskfile.yml` and edit the options under `vars:`.
 
+```yaml
+vars:
+  TITLE: 'My Plugin'
+  NAME: 'myplugin'
+  VERSION: '0.0.1'
+  DESCRIPTION: 'Lorem ipsum'
+  DATE: '{{ now | date "2006-01-02" }}'
+  COPYRIGHT: 'Copyright (C)'
+  LICENSE: 'GNU General Public License'
+  AUTHOR: 'My Company'
+  AUTHOREMAIL: 'me@example.com'
+  AUTHORURL: 'example.com'
+```
+
 After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
 
-In order keep the starter kit files as minimal as possible all utilities are separated in their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update to the latest version from time to time, run `composer update`.
+## Updating commands and tasks
+
+The command and task scripts have their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update the package to the latest version run `composer update` from time to time.
 
 ## Github
 
