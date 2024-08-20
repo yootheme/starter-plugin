@@ -67,6 +67,8 @@ You will be asked further questions to configure the module.
 - **Enter module namespace:** Enter a PHP namespace, for example `MyPlugin/MyModule`
 - **Add asset files example? [y/N]** Enter defaults to *No*.
 - **Add settings example? [y/N]** Enter defaults to *No*.
+- **Add custom LESS example? [y/N]** Enter defaults to *No*.
+- **Add custom source example? [y/N]** Enter defaults to *No*.
 
 Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
@@ -106,7 +108,7 @@ task build-wordpress
 task build-joomla
 ```
 
-## Publishing and versioning 
+## Publishing and versioning
 
 To raise the version number of your plugin or change metadata like the plugin title or description, open the `Taskfile.yml` and edit the options under `vars:`.
 
