@@ -12,7 +12,7 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "yootheme/starter-utils": "@dev"
+        "yootheme/starter-utils": "^1.0"
     },
     "scripts": {
         "run:task": "YOOtheme\\Starter\\TaskHelper::run",
