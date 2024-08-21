@@ -66,11 +66,11 @@ composer create:module MODULE_NAME
 You will be asked further questions to configure the module.
 
 - **Enter module namespace:** Enter a PHP namespace, for example `MyPlugin/MyModule`
-- **Add asset files example? [y/N]** Enter defaults to *No*.
-- **Add settings example? [y/N]** Enter defaults to *No*.
-- **Add custom LESS example? [y/N]** Enter defaults to *No*.
-- **Add custom source example? [y/N]** Enter defaults to *No*.
-- **Add translation files example? [y/N]** Enter defaults to *No*.
+- **Add asset files example? [y/N]** Enter defaults to _No_.
+- **Add settings example? [y/N]** Enter defaults to _No_.
+- **Add custom LESS example? [y/N]** Enter defaults to _No_.
+- **Add custom source example? [y/N]** Enter defaults to _No_.
+- **Add translation files example? [y/N]** Enter defaults to _No_.
 
 Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
@@ -93,7 +93,7 @@ composer create:element ELEMENT_NAME MODULE_NAME
 You will be asked further questions to configure the element.
 
 - **Enter element title:** The element title, for example `My Element`
-- **Create multiple items element? [y/N]** Enter defaults to *No*.
+- **Create multiple items element? [y/N]** Enter defaults to _No_.
 
 Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
