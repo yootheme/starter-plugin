@@ -1,8 +1,10 @@
 {
+    "name": "starter-plugin",
     "type": "module",
     "private": true,
     "scripts": {
         "prepare": "husky install",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
         "prettier:check": "prettier . --check",
         "prettier:write": "prettier . --write"
     },
@@ -14,6 +16,8 @@
         "@commitlint/config-conventional": "^19.2.2",
         "@prettier/plugin-php": "^0.22.2",
         "@prettier/plugin-xml": "^3.4.1",
+        "conventional-changelog-angular": "^8.0.0",
+        "conventional-changelog-cli": "^5.0.0",
         "husky": "^8.0.0",
         "lint-staged": "^15.2.7",
         "prettier": "^3.3.3"
