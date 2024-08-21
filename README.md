@@ -73,6 +73,8 @@ You will be asked further questions to configure the module.
 
 Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
+**Note:** Add `wordpress` or `joomla` to the name for system-specific modules, for example `my-module-wordpress` or `my-module-joomla`. The build tasks will only copy the relevant modules into the WordPress and Joomla zip archives.
+
 ## Create a new element
 
 To create a new element run the following command and replace `ELEMENT_NAME` with the name of your element, for example `my-element`. If there are multiple modules, choose a module of the provided list.
