@@ -32,7 +32,7 @@ This will create a new `myplugin` directory with required plugin files.
 
 ```
 .
-├── build                   # Plugin blueprint files
+├── build                  # Plugin blueprint files
 │   ├── joomla
 │       ├── myplugin.php   # Joomla plugin
 |       ├── myplugin.xml   # Joomla plugin metadata
@@ -95,7 +95,7 @@ You will be asked further questions to configure the element.
 - **Enter element title:** The element title, for example `My Element`
 - **Create multiple items element? [y/N]** Press Enter for _No_.
 
-Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
+Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-elements) to learn more about the created files and code examples.
 
 ## Build distribution files
 
