@@ -38,10 +38,11 @@ This will create a new `myplugin` directory with required plugin files.
 |       ├── myplugin.xml   # Joomla plugin metadata
 │   ├── wordpress
 │       ├── myplugin.php   # WordPress plugin
+├── .env                   # Metadata
 ├── vendor                 # Development dependencies
 ├── LICENSE.md
 ├── README.md
-└── Taskfile.yml           # Metadata and tasks
+└── Taskfile.yml           # Tasks
 ```
 
 ## Set up the plugin
@@ -114,23 +115,38 @@ task build-joomla
 
 ## Publishing and versioning
 
-To raise the version number of your plugin or change metadata like the plugin title or description, open the `Taskfile.yml` and edit the options under `vars:`.
+To raise the version number of your plugin or change metadata like the plugin title or description, open the `.env` and edit the options.
 
 ```yaml
-vars:
-  TITLE: 'My Plugin'
-  NAME: 'myplugin'
-  VERSION: '0.0.1'
-  DESCRIPTION: 'Lorem ipsum'
-  DATE: '{{ now | date "2006-01-02" }}'
-  COPYRIGHT: 'Copyright (C)'
-  LICENSE: 'GNU General Public License'
-  AUTHOR: 'My Company'
-  AUTHOREMAIL: 'me@example.com'
-  AUTHORURL: 'example.com'
+TITLE='My Plugin'
+NAME='myplugin'
+VERSION='0.0.1'
+DESCRIPTION='Lorem ipsum'
+DATE='{{ now | date "2006-01-02" }}'
+COPYRIGHT='Copyright (C)'
+LICENSE='GNU General Public License'
+AUTHOR='My Company'
+AUTHOREMAIL='me@example.com'
+AUTHORURL='example.com'
+
+# Joomla Package information
+STABILITY='stable'
+DOWNLOADURL=https://www.github.com/example
+PHPMINIMUM='7.4'
+TARGETPLATFORM='(5\.[01]|4\.[01234]|3\.10)\.'
 ```
 
 After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
+
+## Create Joomla Update XML
+
+You can create the Joomla Update XML for your plugin by running the command
+
+```bash
+composer create:updateXML
+```
+
+It creates the update.xml file in the `dist` folder. Provide a link to this file in the `<updateservers>` in you plugin to pull updates for your extension.
 
 ## Updating commands and tasks
 
