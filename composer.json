@@ -19,6 +19,7 @@
         "create:plugin": "YOOtheme\\Starter\\CreatePluginCommand",
         "create:element": "YOOtheme\\Starter\\CreateElementCommand",
         "create:module": "YOOtheme\\Starter\\CreateModuleCommand",
+        "create:updateXML": "YOOtheme\\Starter\\CreateJoomlaUpdateXMLCommand",
         "post-create-project-cmd": "@composer create:plugin"
     }
 }
