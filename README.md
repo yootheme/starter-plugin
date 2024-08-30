@@ -146,7 +146,7 @@ You can create the Joomla Update XML for your plugin by running the command
 composer create:updateXML
 ```
 
-It creates the update.xml file in the `dist` folder. Provide a link to this file in the `<updateservers>` in you plugin to pull updates for your extension.
+It creates the update.xml file in the `dist` folder. Provide a link to this file in the `<updateservers>` in your plugin to pull updates.
 
 ## Updating commands and tasks
 
