@@ -2,7 +2,7 @@
     "name": "starter-plugin",
     "type": "module",
     "private": true,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "scripts": {
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
         "postinstall": "simple-git-hooks",

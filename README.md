@@ -27,6 +27,7 @@ You will be asked for additional plugin information which will be used in the pl
 - **Enter author name:** The author Name
 - **Enter author email:** The author email
 - **Enter author url:** The author URL
+- **Enter update server url:** The URL to the update server file
 
 This will create a new `myplugin` directory with required plugin files.
 
@@ -128,25 +129,30 @@ LICENSE='GNU General Public License'
 AUTHOR='My Company'
 AUTHOREMAIL='me@example.com'
 AUTHORURL='example.com'
-
-# Joomla Package information
-STABILITY='stable'
-DOWNLOADURL=https://www.github.com/example
-PHPMINIMUM='7.4'
-TARGETPLATFORM='(5\.[01]|4\.[01234]|3\.10)\.'
 ```
 
 After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
 
-## Create Joomla Update XML
+## Update Server
 
-You can create the Joomla Update XML for your plugin by running the command
+Running the [build task](#user-content-build-distribution-files) will also create update server files for Joomla `dist/update.xml` and WordPress `dist/update.json`.
 
-```bash
-composer create:updateXML
+Upload these files to the configured `Update Server URL` to inform about a new version and provide one-click updates for the plugin.
+
+The package information is also stored in the `.env` configuration.
+
+```yaml
+# Update server
+UPDATEURI='https://www.example.com/updates'
+
+# Package information
+TYPE='plugin'
+STABILITY='stable'
+DOWNLOADURL=https://www.example.com/downloads
+PHPMINIMUM='7.4'
+JOOMLAMINIMUM='(5\.[01]|4\.[01234]|3\.10)\.'
+WORDPRESSMINIMUM='6.2'
 ```
-
-It creates the update.xml file in the `dist` folder. Provide a link to this file in the `<updateservers>` in you plugin to pull updates for your extension.
 
 ## Updating commands and tasks
 
