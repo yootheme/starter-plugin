@@ -135,11 +135,7 @@ After that, re-run the [setup task](#user-content-set-up-the-plugin) to update t
 
 ## Update Server
 
-Running the [build task](#user-content-build-distribution-files) will also create update server files for Joomla `dist/update.xml` and WordPress `dist/update.json`.
-
-Upload these files to the configured `Update Server URL` to inform about a new version and provide one-click updates for the plugin.
-
-The package information is also stored in the `.env` configuration.
+To enable 1-click updates in WordPress and Joomla, the [build task](#user-content-build-distribution-files) generates the necessary update server files for WordPress `dist/update.json` and Joomla `dist/update.xml`. These files are configured based on the package information in the `.env` file.
 
 ```yaml
 # Update server
@@ -153,6 +149,8 @@ PHPMINIMUM='7.4'
 JOOMLAMINIMUM='(5\.[01]|4\.[01234]|3\.10)\.'
 WORDPRESSMINIMUM='6.2'
 ```
+
+Upload these files to the `UPDATEURI` URL. This URL is where your plugin checks for updates and retrieves the associated download file. Ensure the zip archives from the `dist` folder are uploaded to the location specified in `DOWNLOADURL` .
 
 ## Updating commands and tasks
 
