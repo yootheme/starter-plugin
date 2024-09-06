@@ -1,20 +1,14 @@
 ## [1.0.2](https://github.com/yootheme/starter-plugin/compare/1.0.1...1.0.2) (2024-09-04)
 
-
 ### Features
 
 * add create wordpress update command ([94d4d15](https://github.com/yootheme/starter-plugin/commit/94d4d158b00c658c02a10b4b06fbf1f8709eeacb))
 
-
-
 ## [1.0.1](https://github.com/yootheme/starter-plugin/compare/1.0.0...1.0.1) (2024-08-30)
-
 
 ### Features
 
 * add create update xml command ([42c5677](https://github.com/yootheme/starter-plugin/commit/42c56772354788b8087db96c71644e9fc7b6bc29))
-
-
 
 # [1.0.0](https://github.com/yootheme/starter-plugin/compare/130b8bc48d39dddd62e51aea2e3903b879525d1c...1.0.0) (2024-08-20)
 

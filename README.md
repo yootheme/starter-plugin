@@ -26,8 +26,8 @@ You will be asked for additional plugin information which will be used in the pl
 - **Enter plugin description:** The plugin description
 - **Enter author name:** The author Name
 - **Enter author email:** The author email
-- **Enter author url:** The author URL
-- **Enter update server url:** The URL to the update server file
+- **Enter author url:** The author URL, for example `https://example.com`
+- **Enter update server url:** The URL to the update server file, for example `https://example.com/updates`
 
 This will create a new `myplugin` directory with required plugin files.
 
@@ -41,7 +41,6 @@ This will create a new `myplugin` directory with required plugin files.
 │       ├── myplugin.php   # WordPress plugin
 ├── .env                   # Metadata
 ├── vendor                 # Development dependencies
-├── LICENSE.md
 ├── README.md
 └── Taskfile.yml           # Tasks
 ```
@@ -95,6 +94,7 @@ composer create:element ELEMENT_NAME MODULE_NAME
 You will be asked further questions to configure the element.
 
 - **Enter element title:** The element title, for example `My Element`
+- **Enter element group:** Press Enter for `Custom`.
 - **Create multiple items element? [y/N]** Press Enter for _No_.
 
 Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
@@ -128,7 +128,7 @@ COPYRIGHT='Copyright (C)'
 LICENSE='GNU General Public License'
 AUTHOR='My Company'
 AUTHOREMAIL='me@example.com'
-AUTHORURL='example.com'
+AUTHORURL='https://example.com'
 ```
 
 After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
@@ -143,12 +143,12 @@ The package information is also stored in the `.env` configuration.
 
 ```yaml
 # Update server
-UPDATEURI='https://www.example.com/updates'
+UPDATEURI='https://example.com/updates'
 
 # Package information
 TYPE='plugin'
 STABILITY='stable'
-DOWNLOADURL=https://www.example.com/downloads
+DOWNLOADURL='https://example.com/downloads'
 PHPMINIMUM='7.4'
 JOOMLAMINIMUM='(5\.[01]|4\.[01234]|3\.10)\.'
 WORDPRESSMINIMUM='6.2'
