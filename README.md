@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/5fabe4cb-8fdc-4132-8281-56f87774b414" width="240" height="110">
+</p>
+
 # Starter Plugin
 
 The YOOtheme starter kit provides a minimal and simple starting point for building your next [YOOtheme Pro](https://yootheme.com) extension. Easily create a module for YOOtheme Pro to extend its functionalities. For example, add setting panels to the customizer, elements to the page builder or load needed asset files into the site. Once the module is customized based on your application's needs, automatically build a Joomla plugin and WordPress plugin to distribute it to your customer project.
