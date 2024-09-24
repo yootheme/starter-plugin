@@ -100,6 +100,7 @@ You will be asked further questions to configure the element.
 - **Enter element title:** The element title, for example `My Element`
 - **Enter element group:** Press Enter for `Custom`.
 - **Create multiple items element? [y/N]** Press Enter for _No_.
+- **Include Element transform example? [y/N]** Press Enter for _No_.
 
 Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) to learn more about the created files and code examples.
 
@@ -146,7 +147,6 @@ To enable 1-click updates in WordPress and Joomla, the [build task](#user-conten
 UPDATEURI='https://example.com/updates'
 
 # Package information
-TYPE='plugin'
 STABILITY='stable'
 DOWNLOADURL='https://example.com/downloads'
 PHPMINIMUM='7.4'
