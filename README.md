@@ -4,7 +4,7 @@
 
 # Starter Plugin
 
-The YOOtheme starter kit provides a minimal and simple starting point for building your next [YOOtheme Pro](https://yootheme.com) extension. Easily create a module for YOOtheme Pro to extend its functionalities. For example, add setting panels to the customizer, elements to the page builder or load needed asset files into the site. Once the module is customized based on your application's needs, automatically build a Joomla plugin and WordPress plugin to distribute it to your customer project.
+The YOOtheme Starter Plugin is a ready-to-use starter kit to help you build your next [YOOtheme Pro](https://yootheme.com) extension. Easily create a module for YOOtheme Pro to extend its functionalities. For example, add setting panels to the customizer, elements to the page builder or load needed asset files into the site. It takes care of all the tedious tasks, like the integration into Joomla or WordPress, and helps with distribution, versioning and updating of your YOOtheme Pro extension, so you can focus on the actual features.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ npm install -g @go-task/cli
 
 ## Create a new plugin
 
-To create a new plugin run the following command in the plugins folder of WordPress `wp-content/plugins` or Joomla `plugins/system` depending on your preferred development environment. Replace `PLUGIN_NAME` with the name of your plugin, for example `myplugin`.
+To create a new plugin, run Composer's `create-project` command in the plugins folder of WordPress `wp-content/plugins` or Joomla `plugins/system`. Replace `PLUGIN_NAME` with the name of your plugin, for example `myplugin`.
 
 ```bash
 composer create-project yootheme/starter-plugin PLUGIN_NAME
@@ -51,18 +51,18 @@ This will create a new `myplugin` directory with required plugin files.
 
 ## Set up the plugin
 
-Open your new plugin folder in the terminal and use one of the following task to copy the necessary plugin files from the `build` folder to the plugin root folder.
+To make your new plugin available in WordPress or Joomla, run the corresponding setup task in the plugin root folder. This will copy the necessary plugin files from the `build` folder to the plugin root folder.
 
 ```bash
 task setup-wordpress
 task setup-joomla
 ```
 
-Now the plugin can be discoverd and installed in WordPress or Joomla.
+Now the plugin can be discovered and installed in WordPress or Joomla.
 
 ## Create a new module
 
-To create a new module run the following command and replace `MODULE_NAME` with the name of your module, for example `my-module`.
+To create a new YOOtheme Pro module, which is a package of code that extends the functionality of YOOtheme Pro, run the following command and replace `MODULE_NAME` with the name of your module, for example `my-module`.
 
 ```bash
 composer create:module MODULE_NAME
@@ -83,13 +83,13 @@ Read the [Modules documentation](https://yootheme.com/support/yootheme-pro/jooml
 
 ## Create a new element
 
-To create a new element run the following command and replace `ELEMENT_NAME` with the name of your element, for example `my-element`. If there are multiple modules, choose a module of the provided list.
+To create a new element, run the following command and replace `ELEMENT_NAME` with the name of your element, for example `my-element`. If there are multiple modules, choose a module from the provided list.
 
 ```bash
 composer create:element ELEMENT_NAME
 ```
 
-Optionally define the module where the element should be created.
+Optionally, define the module where the element should be created.
 
 ```bash
 composer create:element ELEMENT_NAME MODULE_NAME
@@ -106,7 +106,7 @@ Read the [Elements documentation](https://yootheme.com/support/yootheme-pro/joom
 
 ## Build distribution files
 
-To create an installable zip archive of the plugin for WordPress and Joomla, run the following task. The created zip files are located in the `dist` folder.
+To create an installable zip archive of the plugin for WordPress and Joomla, run the following `build` task. The created zip files are located in the `dist` folder.
 
 ```bash
 task build
@@ -121,7 +121,7 @@ task build-joomla
 
 ## Publishing and versioning
 
-To raise the version number of your plugin or change metadata like the plugin title or description, open the `.env` and edit the options.
+To raise the version number of your plugin or change metadata, like the plugin title or description, edit the `.env` file in the root folder.
 
 ```yaml
 TITLE='My Plugin'
@@ -136,11 +136,11 @@ AUTHOREMAIL='me@example.com'
 AUTHORURL='https://example.com'
 ```
 
-After that, re-run the [setup task](#user-content-set-up-the-plugin) to update the plugin for your develop environment meaning WordPress or Joomla and run the [build task](#user-content-build-distribution-files) to create the distribution files.
+After changing the metadata, re-run the corresponding Joomla or WordPress [setup task](#user-content-set-up-the-plugin) to update the plugin files and run the [build task](#user-content-build-distribution-files) to create new distribution files.
 
 ## Update Server
 
-To enable 1-click updates in WordPress and Joomla, the [build task](#user-content-build-distribution-files) generates the necessary update server files for WordPress `dist/update.json` and Joomla `dist/update.xml`. These files are configured based on the package information in the `.env` file.
+To enable 1-click updates in WordPress and Joomla, run the [build task](#user-content-build-distribution-files) to generate the necessary update server files for WordPress `dist/update.json` and Joomla `dist/update.xml`. These files are configured based on the package information in the `.env` file.
 
 ```yaml
 # Update server
@@ -154,11 +154,11 @@ JOOMLAMINIMUM='(5\.[01]|4\.[01234]|3\.10)\.'
 WORDPRESSMINIMUM='6.2'
 ```
 
-Upload these files to the `UPDATEURI` URL. This URL is where your plugin checks for updates and retrieves the associated download file. Ensure the zip archives from the `dist` folder are uploaded to the location specified in `DOWNLOADURL` .
+Upload these files to the `UPDATEURI` URL. This URL is where your plugin checks for updates and retrieves the associated download file. Ensure the zip archives from the `dist` folder are uploaded to the location specified in `DOWNLOADURL`.
 
 ## Updating commands and tasks
 
-The command and task scripts have their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update the package to the latest version run `composer update` from time to time.
+The command and task scripts have their own [starter-utils](https://github.com/yootheme/starter-utils) Github repository. To update the package to the latest version, run `composer update` from time to time.
 
 ## Github
 
