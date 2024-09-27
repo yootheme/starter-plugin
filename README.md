@@ -43,10 +43,11 @@ This will create a new `myplugin` directory with required plugin files.
 |       ├── myplugin.xml   # Joomla plugin metadata
 │   ├── wordpress
 │       ├── myplugin.php   # WordPress plugin
+|   └── Taskfile.yml       # build tasks
 ├── .env                   # Metadata
 ├── vendor                 # Development dependencies
 ├── README.md
-└── Taskfile.yml           # Tasks
+└── Taskfile.yml           # Main Taskfile
 ```
 
 ## Set up the plugin
