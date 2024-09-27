@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/yootheme/starter-plugin/compare/1.0.2...1.0.3) (2024-09-27)
+
+
+### Features
+
+* add composer post update script ([39392a2](https://github.com/yootheme/starter-plugin/commit/39392a2abfba50aa52db2dc1de6df74824e688a4))
+
+
+
 ## [1.0.2](https://github.com/yootheme/starter-plugin/compare/1.0.1...1.0.2) (2024-09-04)
 
 ### Features
