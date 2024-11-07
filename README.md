@@ -24,6 +24,12 @@ To create a new plugin, run Composer's `create-project` command in the plugins f
 composer create-project yootheme/starter-plugin PLUGIN_NAME
 ```
 
+After Composer has installed the YOOtheme Starter Plugin package, you need to run the `create:plugin` command.
+
+```bash
+composer create:plugin
+```
+
 You will be asked for additional plugin information which will be used in the plugin metadata.
 
 - **Enter plugin title:** The plugin title, for example `My Plugin`
