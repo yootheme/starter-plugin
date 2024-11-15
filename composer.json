@@ -21,7 +21,7 @@
         "create:module": "YOOtheme\\Starter\\CreateModuleCommand",
         "create:joomlaUpdate": "YOOtheme\\Starter\\CreateJoomlaUpdateCommand",
         "create:wordpressUpdate": "YOOtheme\\Starter\\CreateWordpressUpdateCommand",
-        "post-create-project-cmd": "@composer create:plugin",
+        "post-create-project-cmd": "echo Please run composer create:plugin",
         "post-update-cmd": "YOOtheme\\Starter\\TaskHelper::postUpdate"
     }
 }

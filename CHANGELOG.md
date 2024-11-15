@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/yootheme/starter-plugin/compare/1.0.3...1.0.4) (2024-11-15)
+
+
+### Bug Fixes
+
+* remove interactive command from `post-create-project-cmd` because it fails on Windows ([e6f80b1](https://github.com/yootheme/starter-plugin/commit/e6f80b100d252bc5148f143daf4a135e645ff247))
+
+
+
 ## [1.0.3](https://github.com/yootheme/starter-plugin/compare/1.0.2...1.0.3) (2024-09-27)
 
 
