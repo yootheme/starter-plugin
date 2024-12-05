@@ -39,7 +39,7 @@ You will be asked for additional plugin information which will be used in the pl
 - **Enter author url:** The author URL, for example `https://example.com`
 - **Enter update server url:** The URL to the update server file, for example `https://example.com/updates`
 
-This will create a new `myplugin` directory with required plugin files.
+This will create the required plugin files in the `build` folder and the `.env` configuration inside your plugin folder.
 
 ```
 .
