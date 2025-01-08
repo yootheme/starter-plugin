@@ -66,6 +66,7 @@ task setup-joomla
 ```
 
 Now the plugin can be discovered and installed in WordPress or Joomla.
+It will do nothing right now until some code has been added. You can go on by creating a new module and adding the example code.
 
 ## Create a new module
 
