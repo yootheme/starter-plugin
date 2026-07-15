@@ -1,32 +1,32 @@
-## [1.0.4](https://github.com/yootheme/starter-plugin/compare/1.0.3...1.0.4) (2024-11-15)
-
+## [1.0.5](https://github.com/yootheme/starter-plugin/compare/1.0.4...1.0.5) (2026-07-15)
 
 ### Bug Fixes
 
-* remove interactive command from `post-create-project-cmd` because it fails on Windows ([e6f80b1](https://github.com/yootheme/starter-plugin/commit/e6f80b100d252bc5148f143daf4a135e645ff247))
+- relative file path on Windows in create-plugin command ([716d030](https://github.com/yootheme/starter-utils/commit/716d030b3822bfd601114e85085c4887cfc40e5a))
 
+## [1.0.4](https://github.com/yootheme/starter-plugin/compare/1.0.3...1.0.4) (2024-11-15)
 
+### Bug Fixes
+
+- remove interactive command from `post-create-project-cmd` because it fails on Windows ([e6f80b1](https://github.com/yootheme/starter-plugin/commit/e6f80b100d252bc5148f143daf4a135e645ff247))
 
 ## [1.0.3](https://github.com/yootheme/starter-plugin/compare/1.0.2...1.0.3) (2024-09-27)
 
-
 ### Features
 
-* add composer post update script ([39392a2](https://github.com/yootheme/starter-plugin/commit/39392a2abfba50aa52db2dc1de6df74824e688a4))
-
-
+- add composer post update script ([39392a2](https://github.com/yootheme/starter-plugin/commit/39392a2abfba50aa52db2dc1de6df74824e688a4))
 
 ## [1.0.2](https://github.com/yootheme/starter-plugin/compare/1.0.1...1.0.2) (2024-09-04)
 
 ### Features
 
-* add create wordpress update command ([94d4d15](https://github.com/yootheme/starter-plugin/commit/94d4d158b00c658c02a10b4b06fbf1f8709eeacb))
+- add create wordpress update command ([94d4d15](https://github.com/yootheme/starter-plugin/commit/94d4d158b00c658c02a10b4b06fbf1f8709eeacb))
 
 ## [1.0.1](https://github.com/yootheme/starter-plugin/compare/1.0.0...1.0.1) (2024-08-30)
 
 ### Features
 
-* add create update xml command ([42c5677](https://github.com/yootheme/starter-plugin/commit/42c56772354788b8087db96c71644e9fc7b6bc29))
+- add create update xml command ([42c5677](https://github.com/yootheme/starter-plugin/commit/42c56772354788b8087db96c71644e9fc7b6bc29))
 
 # [1.0.0](https://github.com/yootheme/starter-plugin/compare/130b8bc48d39dddd62e51aea2e3903b879525d1c...1.0.0) (2024-08-20)
 
