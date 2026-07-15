@@ -1,0 +1,65 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b954339d110cc4773e95741258d341ad",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "yootheme/starter-utils",
+            "version": "1.0.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yootheme/starter-utils.git",
+                "reference": "0664bf33807638b4eeb7fd5e150debc9fca53b10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yootheme/starter-utils/zipball/0664bf33807638b4eeb7fd5e150debc9fca53b10",
+                "reference": "0664bf33807638b4eeb7fd5e150debc9fca53b10",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.7",
+                "phpstan/phpstan": "^1.11"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "YOOtheme\\Starter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "YOOtheme Pro - Starter Utilities",
+            "homepage": "https://yootheme.com",
+            "keywords": [
+                "joomla",
+                "wordpress",
+                "yootheme"
+            ],
+            "support": {
+                "issues": "https://github.com/yootheme/starter-utils/issues",
+                "source": "https://github.com/yootheme/starter-utils"
+            },
+            "time": "2026-07-15T12:33:28+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.0"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
