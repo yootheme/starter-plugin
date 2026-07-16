@@ -9,16 +9,16 @@
     "packages-dev": [
         {
             "name": "yootheme/starter-utils",
-            "version": "1.0.14",
+            "version": "1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yootheme/starter-utils.git",
-                "reference": "0664bf33807638b4eeb7fd5e150debc9fca53b10"
+                "reference": "927e5328f4e98f2e082c0008fd76287a576ae0a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yootheme/starter-utils/zipball/0664bf33807638b4eeb7fd5e150debc9fca53b10",
-                "reference": "0664bf33807638b4eeb7fd5e150debc9fca53b10",
+                "url": "https://api.github.com/repos/yootheme/starter-utils/zipball/927e5328f4e98f2e082c0008fd76287a576ae0a2",
+                "reference": "927e5328f4e98f2e082c0008fd76287a576ae0a2",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
             },
             "require-dev": {
                 "composer/composer": "^2.7",
-                "phpstan/phpstan": "^1.11"
+                "phpstan/phpstan": "^2.2"
             },
             "type": "library",
             "autoload": {
@@ -49,7 +49,7 @@
                 "issues": "https://github.com/yootheme/starter-utils/issues",
                 "source": "https://github.com/yootheme/starter-utils"
             },
-            "time": "2026-07-15T12:33:28+00:00"
+            "time": "2026-07-16T12:03:29+00:00"
         }
     ],
     "aliases": [],
